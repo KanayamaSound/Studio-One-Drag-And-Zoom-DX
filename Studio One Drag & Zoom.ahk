@@ -165,11 +165,11 @@ HandleMouseWheel(delta) {
 }
 
 PostMW(delta, modifiers, x, y) {
-	; global s1Window
 	CoordMode("Mouse", "Screen")
+	MouseGetPos(, , &currentWindow)
 	lowOrderX := x & 0xFFFF
 	highOrderY := y & 0xFFFF
-	PostMessage(0x20A, delta << 16 | modifiers, highOrderY << 16 | lowOrderX, , "ahk_id " s1Window)
+	PostMessage(0x20A, delta << 16 | modifiers, highOrderY << 16 | lowOrderX, , "ahk_id " currentWindow)
 }
 
 Timer() {
