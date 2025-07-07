@@ -145,9 +145,9 @@ CheckWin() {
 }
 
 HandleDragButton(ignoreY) {
-	global lastX, lastY, startX, startY, s1Window, ignoreYEnabled
+	global lastX, lastY, startX, startY, ignoreYEnabled
 	ignoreYEnabled := ignoreY
-	MouseGetPos(&startX, &startY, &s1Window)
+	MouseGetPos(&startX, &startY)
 	lastX := startX
 	lastY := startY
 	SetTimer(Timer, 10)
@@ -158,8 +158,7 @@ ReleaseDragButton() {
 }
 
 HandleMouseWheel(delta) {
-	global s1Window
-	MouseGetPos(&mX, &mY, &s1Window)
+	MouseGetPos(&mX, &mY)
 	PostMW(delta, kCtrl, mX, mY)
 	PostMW(delta, kCtrlShift, mX, mY)
 }
