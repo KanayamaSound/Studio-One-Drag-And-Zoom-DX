@@ -50,9 +50,11 @@ Simply download the latest compiled .exe file from the [releases](https://github
 # Accessing the settings
 
 Running either the .exe or the .ahk file will not popup a program window. The only thing that is added is this tray icon (2nd icon from the left):
+
 <img width="299" height="37" alt="tray" src="https://github.com/user-attachments/assets/62feb25c-a926-4535-9e6d-f4c854d13d72" />
 
 Simply right click on this icon to show the settings menu. _(note: The menu will close when changing a setting. This is an annoying limitation of AutoHotkey's tray function.)_
+
 <img width="344" height="286" alt="traymenu" src="https://github.com/user-attachments/assets/285f8bff-68f3-4a30-b00a-96c6d83052bb" />
 
 
