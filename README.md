@@ -1,5 +1,5 @@
-# Studio One Drag &amp; Zoom
-This AutoHotKey V2 script enables you to use the WIN+MouseButton(s) to drag the view of your arrangement, piano-roll etc, and allows you to use the WIN+MouseWheel to zoom horizontally and vertically at the same time (like "pinch to zoom"). Functionality can be enabled/disabled and adjusted using the tray icon by right clicking on the tray icon. It also comes with a "Run at startup" toggle so that you can start it up when your system boots and not have to think about it anymore.
+# Studio One Drag &amp; Zoom DX
+This AutoHotKey V2 script enables you to use the WIN+MouseButton(s) to drag the view of your arrangement, piano-roll etc, and allows you to use the WIN+MouseWheel to zoom horizontally and vertically at the same time (like "pinch to zoom"), or drag to zoom using one of three hotkey setups, which offers a different experience from the pinch to zoom style. Functionality can be enabled/disabled and adjusted using the tray icon by right clicking on the tray icon. It also comes with a "Run at startup" toggle so that you can start it up when your system boots and not have to think about it anymore.
 
 ![StudioOneDragAndZoom](https://github.com/Ronner/Studio-One-Drag-And-Zoom/assets/2070774/6f7d3ac3-95e8-4a05-b7fc-cb96f56b8a22)
 
@@ -11,6 +11,18 @@ When using WIN+RightMouseButton you will drag horizontally only. This should be 
 # Caution when dragging on the console!
 When using the drag functionality on the mixer/console, make sure to use WIN + RightMouseButton, otherwise it has all kinds of side effects. This is due to the fact that to achieve the dragging functionality the script sends mousewheel commands to Studio One. However, when using the mousewheel on the mixer/console without shift, it can result in moving faders and other setttings.
 
+
+## (New in DX version!) Drag to Zoom (Requires some setup in Studio One>Keyboard Shortcuts)
+-Advantages-
+* Independent scrolling in both directions: As vertical scrolling has the unfortunate side effect of resizing track lanes and layers, some might prefer to separate the functions. Thus, it's still possible to vertically zoom in the Piano Roll by using a separte key function.
+* Drag Zoom relies on the "Zoom fine" functions in the keyboard shortcuts settings, allowing for a smoother zooming experience over the mouse wheel
+
+#REQUIRED SETUP for Drag Zoom
+1. Go to the Keyboard Shortcuts settings in Studio One
+2. Search for "Fine" and go to the "Zoom" category
+3. Set "Zoom In Fine" to Ctrl+Alt+Right Arrow, "Zoom In Vertical Fine" to Ctrl+Alt+Up Arrow, "Zoom Out Fine" to Ctrl+Alt+Left Arrow, and "Zoom Out Vertical Fine" to Ctrl+Alt+Down Arrow
+
+
 # Windows Only
 Unfortunately this is a Windows only solution. Mac users will have to wait and see if PreSonus decides to put this type of functionality within Studio One itself. I sure hope they do so we do not have to resort to scripted workarounds like this.
 
@@ -18,7 +30,7 @@ Unfortunately this is a Windows only solution. Mac users will have to wait and s
 You can install this utility in one of two ways:
 
 ## 1. Easiest
-Simply download the latest compiled .exe file from the [releases](https://github.com/Ronner/Studio-One-Drag-And-Zoom/releases) page and run that (**NB**: It's a 64bit .exe).
+Simply download the latest compiled .exe file from the [releases](https://github.com/KanayamaSound/Studio-One-Drag-And-Zoom-Dx/releases) page and run it (**NB**: It's a 64bit .exe).
 
 ## 2. Using AutoHotKey V2 
 * Install AutoHotKey V2, which can be downloaded from the official [AutoHotKey.com](https://www.autohotkey.com/) website.
